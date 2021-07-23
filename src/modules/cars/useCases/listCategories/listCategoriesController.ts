@@ -3,7 +3,7 @@ import { ListCategoriesUseCase } from "./listCategorieUseCase";
 
 class ListCategoriesController {
     constructor(private listCategoriesUseCase: ListCategoriesUseCase) {}
-    handle(request: Request, response: Response): Response {
+    async handle(request: Request, response: Response): Response {
         const all = this.listCategoriesUseCase.execute();
 
     return response.json(all)
