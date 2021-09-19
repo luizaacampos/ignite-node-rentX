@@ -1,5 +1,5 @@
 import {MigrationInterface, QueryRunner, Table} from "typeorm";
-import { categoriesRoutes } from "../../routes/categories.routes";
+import { categoriesRoutes } from "../../http/routes/categories.routes";
 
 export class CreateCategories1626991722143 implements MigrationInterface {
 
