@@ -5,9 +5,8 @@
 
 **RN** 
 - should not be able to register a car with an existent license plate.
-- shouk not be able to change the license plate of a registered car.
 - car should be register as available (default).
-- only admins can register a new car.
+- only admins can register a new car.*
 
 # Cars lists
 
