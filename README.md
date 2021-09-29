@@ -20,15 +20,11 @@
 
 **RF**
 - should be able to register a specification on a car.
-- shou be able to list all specifications.
-- should be able to list all avaiable cars by category name.
-- should be able to list all avaiable cars by brand name.
-- should be able to list all avaiable cars by car name.
 
 **RN**
-- shoul not be able to register a specification on a non-registered car.
+- should not be able to register a specification on a non-registered car.
 - should not be able to register a specification that already exists on a car.
-- user shoul be an admin.
+- user should be an admin.
 
 # car pictures register 
 
@@ -41,7 +37,7 @@
 
 **RN**
 - user should be able to register more than one picture by car.
-- user shoul be an admin.
+- user should be an admin.
 
 # car rent
 

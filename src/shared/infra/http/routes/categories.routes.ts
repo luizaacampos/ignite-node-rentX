@@ -1,7 +1,7 @@
 import { Router } from 'express';
-import { CreateCategoryController } from '@modules/cars/useCases/createCategory/createCategoryController'
-import { ListCategoriesController } from '@modules/cars/useCases/listCategories/listCategoriesController';
-import { ImportCategoryController } from '@modules/cars/useCases/importCategory/importCategoryController';
+import { CreateCategoryController } from '@modules/cars/useCases/CreateCategory/CreateCategoryController'
+import { ListCategoriesController } from '@modules/cars/useCases/ListCategories/ListCategoriesController';
+import { ImportCategoryController } from '@modules/cars/useCases/ImportCategory/ImportCategoryController';
 import multer from 'multer';
 import { ensureAuthenticated } from '@shared/infra/http/middlewares/ensureAuthenticated';
 import { ensureAdmin } from '@shared/infra/http/middlewares/ensureAdmin';

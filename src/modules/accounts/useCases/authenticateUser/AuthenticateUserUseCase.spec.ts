@@ -1,17 +1,17 @@
-import { AuthenticateUserUsecase } from "./AuthenticateUserUsecase"
+import { AuthenticateUserUseCase } from "./AuthenticateUserUseCase"
 import { FakeUsersRepository } from "../../repositories/fakes/FakeUsersRepository"
-import { CreateUserUseCase } from "../createUser/CreateUserUsecase";
+import { CreateUserUseCase } from "../CreateUser/CreateUserUseCase";
 import { ICreateUserDTO } from "@modules/dtos/ICreateUserDTO";
 import { AppError } from "@shared/errors/AppError";
 
-let authenticateUserUseCase: AuthenticateUserUsecase;
+let authenticateUserUseCase: AuthenticateUserUseCase;
 let fakeUsersRepository: FakeUsersRepository;
 let createUserUseCase: CreateUserUseCase;
 
 describe("Authenticate user", () => {
     beforeEach(() => {
         fakeUsersRepository = new FakeUsersRepository();
-        authenticateUserUseCase = new AuthenticateUserUsecase(fakeUsersRepository);
+        authenticateUserUseCase = new AuthenticateUserUseCase(fakeUsersRepository);
         createUserUseCase = new CreateUserUseCase(fakeUsersRepository);
     })
 

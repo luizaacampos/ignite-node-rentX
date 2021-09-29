@@ -1,6 +1,6 @@
 import { AppError } from "@shared/errors/AppError";
 import { FakeCategoriesRepository } from "../../repositories/fakes/FakeCategoriesRepository";
-import { CreateCategoryUseCase } from "../createCategory/CreateCategoryUseCase";
+import { CreateCategoryUseCase } from "../CreateCategory/CreateCategoryUseCase";
 
 describe("Create category", () => {
 
