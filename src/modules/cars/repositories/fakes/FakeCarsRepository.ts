@@ -13,7 +13,9 @@ class FakeCarsRepository implements ICarsRepository {
         description,
         fine_amount,
         name,
-        license_plate
+        license_plate,
+        specifications,
+        id,
     }: ICreateCarDTO): Promise<Car> {
         const car = new Car();
 
@@ -24,7 +26,9 @@ class FakeCarsRepository implements ICarsRepository {
             description,
             fine_amount,
             name,
-            license_plate
+            license_plate,
+            specifications,
+            id,
         })
 
         this.cars.push(car)
