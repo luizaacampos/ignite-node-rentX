@@ -30,7 +30,6 @@
 
 **RF**
 - should be able to register car picture.
-- should be able to list all cars.
 
 **RNF**
 - should be able to use multer to upload files.
