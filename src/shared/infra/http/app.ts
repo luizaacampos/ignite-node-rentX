@@ -1,3 +1,4 @@
+import "reflect-metadata";
 import express, { NextFunction, Request, Response } from 'express';
 import "express-async-errors";
 import swaggerUi from 'swagger-ui-express';
@@ -10,7 +11,7 @@ import "@shared/container";
 import { router } from './routes';
 import { AppError } from '@shared/errors/AppError';
 
-createConnection();
+createConnection('database');
 const app = express();
 
 app.use(express.json());
@@ -32,4 +33,4 @@ app.use((err: Error, request: Request, response: Response, next: NextFunction) =
     })
 });
 
-app.listen(3333, () => console.log('rodando'));
+export { app };

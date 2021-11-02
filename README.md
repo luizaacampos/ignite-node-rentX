@@ -38,7 +38,7 @@
 - user should be able to register more than one picture by car.
 - user should be an admin.
 
-# car rent
+# car rental
 
 **RF**
 - should be able to register a rent
@@ -47,4 +47,5 @@
 - the rent should be for at least 24 hours.
 - user should not be able to rent two cars at the same time.
 - car should not be rent by two users at the same time.
+- user should be logged in to rent a car.
 
