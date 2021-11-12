@@ -1,8 +1,9 @@
 import { app } from '@shared/infra/http/app';
 import { hash } from 'bcryptjs';
 import request from "supertest";
-import { Connection, createConnection } from 'typeorm';
+import { Connection } from 'typeorm';
 import { v4 as uuidV4 } from 'uuid';
+import createConnection from '../../../../shared/infra/typeorm'
 
 let connection: Connection
 describe("List category controller", () => {
@@ -37,7 +38,7 @@ describe("List category controller", () => {
 
         await request(app).post("/categories")
         .send({
-            name: "Categort test",
+            name: "Category test",
             description: "description test"
         })
         .set({
@@ -48,6 +49,6 @@ describe("List category controller", () => {
 
         expect(response.status).toBe(200);
         expect(response.body.length).toBe(1);
-        expect(response.body[0].name).toEqual("Categort test");
+        expect(response.body[0].name).toEqual("Category test");
     });
 })
