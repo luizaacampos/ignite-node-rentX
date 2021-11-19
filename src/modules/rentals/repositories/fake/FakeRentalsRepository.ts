@@ -3,6 +3,8 @@ import { Rental } from '@modules/rentals/infra/typeorm/entities/Rental';
 import { IRentalsRepository } from '../IRentalsRepository';
 
 class FakeRentalsRepository implements IRentalsRepository {
+    rentals: Rental[] = [];
+
     async create({ 
         car_id, 
         user_id, 
@@ -20,7 +22,6 @@ class FakeRentalsRepository implements IRentalsRepository {
 
         return rental;
     }
-    rentals: Rental[] = [];
     async findOpenRentalByCar(car_id: string): Promise<Rental> {
         return this.rentals.find(
             rental => rental.car_id === car_id && !rental.end_date
@@ -30,6 +31,12 @@ class FakeRentalsRepository implements IRentalsRepository {
         return this.rentals.find(
             rental => rental.user_id === user_id && !rental.end_date
             )
+    }
+    async findById(id: string): Promise<Rental> {
+        return this.rentals.find((rental) => rental.id === id);
+    }
+    async fidnByUser(user_id: string): Promise<Rental[]> {
+        return this.rentals.filter((rental) => rental.user_id === user_id);
     }
 
 }

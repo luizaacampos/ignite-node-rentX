@@ -41,11 +41,34 @@
 # car rental
 
 **RF**
-- should be able to register a rent
+- should be able to register a rent.
 
 **RN**
 - the rent should be for at least 24 hours.
 - user should not be able to rent two cars at the same time.
 - car should not be rent by two users at the same time.
 - user should be logged in to rent a car.
+- when rented, car status must be unavailable.
+
+# car return 
+
+**RF**
+- should be able to return a car.
+
+**RN**
+- user should be logged in.
+- if car is returned before 24 hours user must be charged daily.
+- when returned, car must become available.
+- when returned, user must become available.
+- when returned, total rent must be calculated.
+- if the return is late, a fine must be charged.
+- the fine must be charged to the total rent.
+
+# rentals list
+
+**RF**
+- should be able to show all user's rentals.
+
+**RN**
+- user should be logged in.
 

@@ -1,5 +1,5 @@
-import createConnection from '../../typeorm'
-import { app } from '../app';
+import createConnection from '../typeorm'
+import { app } from './app';
 
 (async () => {
     await createConnection();
