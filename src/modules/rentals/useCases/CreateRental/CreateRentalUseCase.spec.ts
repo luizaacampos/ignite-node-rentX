@@ -1,6 +1,6 @@
 import { FakeCarsRepository } from '@modules/cars/repositories/fakes/FakeCarsRepository';
 import { FakeRentalsRepository } from '@modules/rentals/repositories/fake/FakeRentalsRepository';
-import { DayjsDateProvider } from '@shared/container/providers/DateProvider/implementatios/DayjsDateProvider';
+import { DayjsDateProvider } from '@shared/container/providers/DateProvider/implementations/DayjsDateProvider';
 import { AppError } from '@shared/errors/AppError';
 import dayjs from 'dayjs';
 import { CreateRentalUseCase } from './CreateRentalUseCase'

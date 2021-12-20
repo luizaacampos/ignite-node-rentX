@@ -72,3 +72,14 @@
 **RN**
 - user should be logged in.
 
+# reset password
+
+**RF**
+- user should be able reset password using their email
+- user should receive an email with the reset step by step
+- user should be able to create a new password
+
+**RN**
+- user needs to enter a new password
+- reset passwod link should expires in 3 hours
+
