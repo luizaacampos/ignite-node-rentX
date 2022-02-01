@@ -1,5 +1,5 @@
 import { UserTokens } from '@modules/accounts/infra/typeorm/entities/UserTokens';
-import { ICreateUserTokenDTO } from '@modules/dtos/ICreateUserTokenDTO';
+import { ICreateUserTokenDTO } from '@modules/accounts/dtos/ICreateUserTokenDTO';
 import { IUsersTokensRepository } from '../IUsersTokensRepository';
 
 class FakeUsersTokensRepository implements IUsersTokensRepository {

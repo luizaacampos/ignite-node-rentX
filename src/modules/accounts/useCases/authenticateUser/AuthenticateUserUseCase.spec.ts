@@ -1,7 +1,7 @@
 import { AuthenticateUserUseCase } from "./AuthenticateUserUseCase"
 import { FakeUsersRepository } from "../../repositories/fakes/FakeUsersRepository"
 import { CreateUserUseCase } from "../CreateUser/CreateUserUseCase";
-import { ICreateUserDTO } from "@modules/dtos/ICreateUserDTO";
+import { ICreateUserDTO } from "@modules/accounts/dtos/ICreateUserDTO";
 import { AppError } from "@shared/errors/AppError";
 import { FakeUsersTokensRepository } from '@modules/accounts/repositories/fakes/FakeUsersTokensRepository';
 import { DayjsDateProvider } from '@shared/container/providers/DateProvider/implementations/DayjsDateProvider';

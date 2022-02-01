@@ -19,7 +19,7 @@ class Car {
     @Column()
     name: string;
 
-        @Column()
+    @Column()
     description: string;
 
     @Column()

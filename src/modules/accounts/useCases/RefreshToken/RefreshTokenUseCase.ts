@@ -19,36 +19,36 @@ interface ITokenResponse {
 class RefreshTokenUseCase {
     constructor(
         @inject("UsersTokensRepository")
-        private UsersTokenRepository: IUsersTokensRepository,
+        private usersTokensRepository: IUsersTokensRepository,
         @inject("DayjsDateProvider")
-        private DayjsDateProvider: IDateProvider
+        private dayjsDateProvider: IDateProvider
     ) {}
     async execute(token: string): Promise<ITokenResponse> {
         const { email, sub } = verify(token, auth.secret_refresh_token) as IPayload;
         
         const user_id = sub
-        const userToken = await this.UsersTokenRepository
+        const userToken = await this.usersTokensRepository
             .findByUserIdAndRefreshToken(
                 user_id,
                 token,
             );
 
         if(!userToken) {
-            throw new AppError('Refresh token does not exists!');
+            throw new AppError('Refresh token does not exist!');
         }
 
-        await this.UsersTokenRepository.deleteById(userToken.id);
+        await this.usersTokensRepository.deleteById(userToken.id);
 
         const refresh_token = sign({ email }, auth.secret_refresh_token, {
             subject: sub,
             expiresIn: auth.expires_in_refresh_token,
         });
 
-        const expires_date = this.DayjsDateProvider.addDays(
+        const expires_date = this.dayjsDateProvider.addDays(
             auth.expires_refresh_token_days,
         )
 
-        await this.UsersTokenRepository.create({
+        await this.usersTokensRepository.create({
             expires_date,
             refresh_token,
             user_id,
