@@ -1,28 +1,26 @@
-import "reflect-metadata";
-import "dotenv/config";
 import express, { NextFunction, Request, Response } from 'express';
 import "express-async-errors";
+import { JsonWebTokenError } from 'jsonwebtoken';
 import swaggerUi from 'swagger-ui-express';
 
-import swaggerFile from '../../../swagger.json';
-
-import createConnection from '@shared/infra/typeorm';
+import "reflect-metadata";
+import "dotenv/config";
 import "@shared/container";
 
 import { router } from './routes';
 import { AppError } from '@shared/errors/AppError';
+
+import swaggerFile from '../../../swagger.json';
+
 import upload from '@config/upload';
 
-createConnection('database');
 const app = express();
-
 app.use(express.json());
 
 app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerFile));
 
 app.use("/avatar", express.static(`${upload.tmpFolder}/avatar`));
 app.use("/cars", express.static(`${upload.tmpFolder}/cars`));
-
 
 app.use(router);
 
@@ -31,6 +29,10 @@ app.use((err: Error, request: Request, response: Response, next: NextFunction) =
         return response.status(err.statusCode).json({
             message: err.message
         })
+    }
+
+    if (err instanceof JsonWebTokenError) {
+        return response.status(401).json({ error: err.name, message: err.message });
     }
 
     return response.status(500).json({
