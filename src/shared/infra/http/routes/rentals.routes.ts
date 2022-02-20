@@ -1,6 +1,6 @@
-import { CreateRentalController } from '@modules/rentals/useCases/CreateRental/CreateRentalController';
-import { DevolutionController } from '@modules/rentals/useCases/Devolution/DevolutionController';
-import { ListRentalsByUserController } from '@modules/rentals/useCases/ListRentalsByUser/ListRentalsByUser/ListRentalsByUserController';
+import { CreateRentalController } from '@modules/rentals/useCases/createRental/CreateRentalController';
+import { DevolutionController } from '@modules/rentals/useCases/devolution/DevolutionController';
+import { ListRentalsByUserController } from '@modules/rentals/useCases/listRentalsByUser/ListRentalsByUser/ListRentalsByUserController';
 import { Router } from 'express';
 import { ensureAuthenticated } from '../middlewares/ensureAuthenticated';
 
