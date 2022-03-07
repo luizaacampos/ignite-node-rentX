@@ -1,6 +1,6 @@
 import { IStorageProvider } from '@shared/container/providers/StorageProvider/IStorageProvider';
 import { inject, injectable } from "tsyringe";
-import { IUsersRepository } from "../../repositories/IUsersRepository";
+import { IUsersRepository } from "@modules/accounts/repositories/IUsersRepository";
 
 interface IRequest {
     user_id: string;

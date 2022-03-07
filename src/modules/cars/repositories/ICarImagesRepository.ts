@@ -1,4 +1,4 @@
-import { CarImage } from "../infra/typeorm/entities/CarImage";
+import { CarImage } from "@modules/cars/infra/typeorm/entities/CarImage";
 
 interface ICarImagesRepository {
 

@@ -1,6 +1,6 @@
 import { UserTokens } from '@modules/accounts/infra/typeorm/entities/UserTokens';
 import { ICreateUserTokenDTO } from '@modules/accounts/dtos/ICreateUserTokenDTO';
-import { IUsersTokensRepository } from '../IUsersTokensRepository';
+import { IUsersTokensRepository } from '@modules/accounts/repositories/IUsersTokensRepository';
 
 class FakeUsersTokensRepository implements IUsersTokensRepository {
     usersTokens: UserTokens[] = [];

@@ -1,4 +1,4 @@
-import { IMailProvider } from '../IMailProvider';
+import { IMailProvider } from '@shared/container/providers/MailProvider/IMailProvider';
 
 class FakeMailProvider implements IMailProvider {
     private message: any[] = [];

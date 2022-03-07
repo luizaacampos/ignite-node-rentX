@@ -1,6 +1,6 @@
 import { ICreateCarDTO } from "@modules/cars/DTOs/ICreateCarDTO";
 import { Car } from "@modules/cars/infra/typeorm/entities/Car";
-import { ICarsRepository } from "../ICarsRepository";
+import { ICarsRepository } from "@modules/cars/repositories/ICarsRepository";
 
 class FakeCarsRepository implements ICarsRepository {
     

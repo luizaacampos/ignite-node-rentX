@@ -1,9 +1,10 @@
-import { app } from '@shared/infra/http/app';
 import { hash } from 'bcryptjs';
 import request from "supertest";
 import { Connection } from 'typeorm';
 import { v4 as uuidV4 } from 'uuid';
-import createConnection from '../../../../shared/infra/typeorm'
+
+import { app } from '@shared/infra/http/app';
+import createConnection from '@shared/infra/typeorm'
 
 let connection: Connection
 describe("List category controller", () => {

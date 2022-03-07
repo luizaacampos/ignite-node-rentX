@@ -1,4 +1,4 @@
-import { IMailProvider } from '../IMailProvider';
+import { IMailProvider } from '@shared/container/providers/MailProvider/IMailProvider';
 import nodemailer, { Transporter } from 'nodemailer';
 import { SES } from 'aws-sdk'
 import Handlebars from 'handlebars';

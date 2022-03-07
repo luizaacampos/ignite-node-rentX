@@ -1,5 +1,5 @@
 import { Specification } from "@modules/cars/infra/typeorm/entities/Specification";
-import { ICreateSpecificationDTO, ISpecificationRepository } from "../ISpecificationRepository";
+import { ICreateSpecificationDTO, ISpecificationRepository } from "@modules/cars/repositories/ISpecificationRepository";
 
 class FakeSpecificationRepository implements ISpecificationRepository {
     specifications: Specification[] = [];

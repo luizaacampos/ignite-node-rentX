@@ -1,6 +1,6 @@
 import { User } from "@modules/accounts/infra/typeorm/entities/User";
 import { ICreateUserDTO } from "@modules/accounts/dtos/ICreateUserDTO";
-import { IUsersRepository } from "../IUsersRepository";
+import { IUsersRepository } from "@modules/accounts/repositories/IUsersRepository";
 
 class FakeUsersRepository implements IUsersRepository {
     users: User[] = [];

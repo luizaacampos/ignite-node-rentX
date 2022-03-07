@@ -1,4 +1,4 @@
-import { IStorageProvider } from '../IStorageProvider';
+import { IStorageProvider } from '@shared/container/providers/StorageProvider/IStorageProvider';
 import fs from 'fs';
 import { resolve } from 'path';
 import upload from '@config/upload';
